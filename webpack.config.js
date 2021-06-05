@@ -44,6 +44,7 @@ const plugins = () => {
         }),
         new CopyWebpackPlugin({
         patterns: [
+            {from: path.resolve(__dirname, 'src/assets/img') , to: path.resolve(__dirname, 'app/img')},
             {from: path.resolve(__dirname, 'src/assets') , to: path.resolve(__dirname, 'app')}
         ]
         }),
@@ -163,7 +164,7 @@ module.exports = {
 					},
 				],
                 generator: {
-					filename: 'image/[name][ext]',
+					filename: 'img/[name][ext]',
 				},
             
             },
